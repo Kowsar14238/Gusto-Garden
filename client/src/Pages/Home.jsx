@@ -1,11 +1,17 @@
+import Card from "../Components/Card";
 import Carousel from "../Components/Carousel";
 
 const Home = () => {
-    return (
-        <div className="my-2">
-            <Carousel />
-        </div>
-    );
+  return (
+    <div>
+      <div className="">
+        <Carousel />
+      </div>
+      <div>
+        <Card />
+      </div>
+    </div>
+  );
 };
 
 export default Home;

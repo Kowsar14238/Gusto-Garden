@@ -8,7 +8,7 @@ const MainLayout = () => {
       <div className="h-16">
         <Navbar className=" fixed"/>
       </div>
-      <div className="flex-1 mx-2">
+      <div className="flex-1">
         <Outlet />
       </div>
       <div className="">
