@@ -8,6 +8,9 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import ErrorPage from "./Pages/errorPage";
 import AddFood from "./Components/AddFood";
+import LogIn from "./Components/LogIn";
+import SignUp from "./Components/SignUp";
+import Contact from "./Pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +28,20 @@ const router = createBrowserRouter([
         element: <About />
       },
       {
+        path: "/contact",
+        element: <Contact />
+      },
+      {
         path: "/add-food",
         element: <AddFood />
+      },
+      {
+        path: "/signup",
+        element: <SignUp />
+      },
+      {
+        path: "/login",
+        element: <LogIn />
       }
     ],
   },

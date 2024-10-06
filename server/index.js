@@ -25,7 +25,9 @@ async function run() {
     await client.connect();
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
-    console.log("Admin, you are successfully connected to MongoDB!");
+    console.log("You are successfully connected to MongoDB!");
+
+
 
     //Store food details to database
     app.post("/add-food", async (req, res) => {
@@ -46,6 +48,12 @@ async function run() {
           .json({ success: false, message: "Failed to insert food item." }); // Send JSON response on error
       }
     });
+    
+    //Store user details to database
+    
+
+
+    
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();

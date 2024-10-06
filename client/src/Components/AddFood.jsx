@@ -1,5 +1,6 @@
+import Swal from "sweetalert2";
+
 const AddFood = () => {
-  
   //Handle form submission
   const handleAddFood = (event) => {
     event.preventDefault();
@@ -35,12 +36,27 @@ const AddFood = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          console.log("Food item added successfully:", data);
+          // console.log("Food item added successfully:", data);
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Food item added successfully",
+            showConfirmButton: false,
+            timer: 1000,
+          }),
+            data;
         } else {
-          console.error("Error adding food item:", data.message);
+          // console.error("Error adding food item:", data.message);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Error adding food item!",
+          });
         }
       })
-      .catch((error) => console.error("Network error:", error));
+      .catch((error) => {
+        console.error("Network error:", error);
+      });
   };
 
   return (
